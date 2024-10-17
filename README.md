@@ -10,4 +10,8 @@ se creó el componente principal (filter.component) este cuenta con la caja de t
 
 
 ![Descripción de la imagen](https://github.com/eduardoguerrabobadilla/filterComponent/blob/main/1.png)
+![Descripción de la imagen](https://github.com/eduardoguerrabobadilla/filterComponent/blob/main/2.png)
+![Descripción de la imagen](https://github.com/eduardoguerrabobadilla/filterComponent/blob/main/3.png)
+![Descripción de la imagen](https://github.com/eduardoguerrabobadilla/filterComponent/blob/main/4.png)
+![Descripción de la imagen](https://github.com/eduardoguerrabobadilla/filterComponent/blob/main/5.png)
 
