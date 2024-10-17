@@ -1,0 +1,13 @@
+<app-tooltips></app-tooltips>
+<div  class="searchTable">
+  <ion-input
+    type="text"
+    class="ion-text-start"
+    placeholder="Escriba algo para buscar por producto"
+    (ionInput)="updateNombre($event)"
+  ></ion-input>
+  <ion-button  (click)="openCalendar()" fill="clear" size="small">
+    <ion-icon slot="icon-only"   name="calendar-outline"></ion-icon>
+  </ion-button>
+  <menu-despegable></menu-despegable>
+</div>

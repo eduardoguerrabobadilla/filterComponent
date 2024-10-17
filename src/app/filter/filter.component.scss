@@ -1,0 +1,32 @@
+
+ion-card{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+
+.searchTable {
+  display: flex;
+  align-items: center;
+}
+
+.input-actions {
+  display: flex; /* Usar flexbox para el contenedor de acciones */
+  align-items: center; /* Alinea verticalmente al centro */
+}
+
+.input-actions ion-button,
+.input-actions menu-despegable {
+  margin-left: 10px; /* Espacio entre el botón y el menú desplegable */
+}
+
+ion-badge {
+  margin-left: 10px;
+  transform: translateY(3px);
+}
+
+.ion-text-start  ::ng-deep input {
+  padding-left: 10px;
+
+}

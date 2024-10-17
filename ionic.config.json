@@ -1,0 +1,7 @@
+{
+  "name": "filterComponent",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

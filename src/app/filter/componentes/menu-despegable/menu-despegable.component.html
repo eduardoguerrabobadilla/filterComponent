@@ -1,0 +1,16 @@
+<ion-button id="popover-button"  fill="clear" size="small" >
+  <ion-icon slot="icon-only"   name="menu-outline"></ion-icon>
+</ion-button>
+<ion-popover trigger="popover-button" [dismissOnSelect]="true">
+  <ng-template>
+    <ion-content color="light">
+      <ion-list [inset]="true">
+        @for (item of categorias; track $index) {
+          <ion-item (click)="categoriaSeleccionada(item.gender)">
+            <ion-label>{{ item.gender }}</ion-label>
+          </ion-item>
+        }
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
