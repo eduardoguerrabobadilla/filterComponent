@@ -81,8 +81,4 @@ export class HomePage implements OnInit {
     this.filterService.inicializarData();
   }
 
-
-
-
-
 }

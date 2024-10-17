@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Ngx Datatable </ion-title>
+    <ion-title> Componente de Filtros</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +9,7 @@
     <ion-row>
       <ion-col size="12">
           <app-filter> </app-filter>
-        <div>
+        <div class="btnApp">
           <ion-button  (click)="aplicarFiltro()"  size="small">
             Aplicar filtro
           </ion-button>
@@ -32,7 +32,7 @@
             [rows]="rows()"
           >
 
-            <ngx-datatable-column [width]="120" prop="name">
+            <ngx-datatable-column [width]="120" prop="nombre">
               <ng-template
                 let-column="column"
                 ngx-datatable-header-template
@@ -42,7 +42,7 @@
               </ng-template>
             </ngx-datatable-column>
 
-            <ngx-datatable-column [width]="120" prop="gender">
+            <ngx-datatable-column [width]="120" prop="categoria">
               <ng-template
                 let-column="column"
                 ngx-datatable-header-template
@@ -52,7 +52,7 @@
               </ng-template>
             </ngx-datatable-column>
 
-            <ngx-datatable-column [width]="130" prop="company">
+            <ngx-datatable-column [width]="130" prop="fecha">
               <ng-template
                 let-column="column"
                 ngx-datatable-header-template

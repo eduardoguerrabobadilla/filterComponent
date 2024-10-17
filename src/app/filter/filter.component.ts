@@ -30,7 +30,6 @@ export class FilterComponent  implements OnInit {
 
 
   updateNombre(event: any) {
-    console.log('Valor recibido:', event.detail.value);
     this.filterService.updateNombre(event.detail.value);
   }
 

@@ -23,9 +23,9 @@ export class MenuDespegableComponent implements OnInit {
   private filterService = inject(FilterService);
 
   public categorias =  [
-    { id: 1, gender: 'Male'},
-    { id: 2, gender: 'Male'},
-    { id: 3, gender: 'Female' },
+    { id: 1, gender: 'Refrescos'},
+    { id: 2, gender: 'Lacteos'},
+    { id: 3, gender: 'Botanas' },
 
   ]
 

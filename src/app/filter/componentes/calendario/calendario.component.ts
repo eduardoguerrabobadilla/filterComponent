@@ -71,17 +71,20 @@ export class CalendarioComponent implements OnInit {
   }
 
   aceptarFiltros() {
-
        this.modalController.dismiss(this.dateRange, 'range');
 
        const fechaUpdaate : RangoFechas = {
-        fechaInicio : this.dateRange.from,
-        fechaFin    : this.dateRange.to
+              fechaInicio : this.dateRange.from,
+              fechaFin    : this.dateRange.to
        }
        this.filterService.updateFecha(fechaUpdaate);
        this.filterService.getFechaFormateada();
        this.modalController.dismiss();
-    }
+  }
+
+  cancelar(){
+    this.modalController.dismiss();
+  }
 
 
   }

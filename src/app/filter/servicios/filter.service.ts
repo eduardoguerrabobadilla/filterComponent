@@ -14,18 +14,18 @@ export class FilterService {
   private fechaFormateada  = signal<string>(''); //signal categoria Seleccionada
   private pipe             = inject(DatePipe);
   private Initdata         = [
-    { id: 1, name: 'Austin', gender: 'Male', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
-    { id: 2, name: 'Dany', gender: 'Male', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
-    { id: 3, name: 'Molly', gender: 'Female', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
-    { id: 4, name: 'Austin', gender: 'Male', company: this.pipe.transform(new Date('2024-10-11T00:00:00'), 'YYYY-MM-dd') },
-    { id: 5, name: 'Dany', gender: 'Male', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
-    { id: 6, name: 'Molly', gender: 'Female', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
-    { id: 7, name: 'Austin', gender: 'Male', company: this.pipe.transform(new Date('2024-10-12T00:00:00'), 'YYYY-MM-dd') },
-    { id: 8, name: 'Dany', gender: 'Male', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
-    { id: 9, name: 'Molly', gender: 'Female', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
-    { id: 10, name: 'Austin', gender: 'Male', company: this.pipe.transform(new Date('2024-10-25T00:00:00'), 'YYYY-MM-dd') },
-    { id: 11, name: 'Dany', gender: 'Male', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
-    { id: 12, name: 'Molly', gender: 'Female', company: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 1, nombre: 'Coca cola', categoria: 'Refrescos', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 2, nombre: 'Pepsi cola', categoria: 'Refrescos', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 3, nombre: 'Doritos', categoria: 'Botanas', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 4, nombre: 'Leche', categoria: 'Lacteos', fecha: this.pipe.transform(new Date('2024-10-11T00:00:00'), 'YYYY-MM-dd') },
+    { id: 5, nombre: 'Coca cola', categoria: 'Refrescos', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 6, nombre: 'Pepsi cola', categoria: 'Refrescos', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 7, nombre: 'Doritos', categoria: 'Botanas', fecha: this.pipe.transform(new Date('2024-10-12T00:00:00'), 'YYYY-MM-dd') },
+    { id: 8, nombre: 'Leche light', categoria: 'Lacteos', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 9, nombre: 'Pepsi cola', categoria: 'Refrescos', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 10, nombre: 'Doritos', categoria: 'Botanas', fecha: this.pipe.transform(new Date('2024-10-25T00:00:00'), 'YYYY-MM-dd') },
+    { id: 11, nombre: 'Leche', categoria: 'Lacteos', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
+    { id: 12, nombre: 'Coca cola', categoria: 'Refrescos', fecha: this.pipe.transform(new Date('2024-10-10T00:00:00'), 'YYYY-MM-dd') },
   ]
 
   constructor() {
@@ -43,9 +43,9 @@ console.log(this.nombreTexto())
 
 
         return value.filter(item => {
-          const matchesName = this.nombreTexto() && this.nombreTexto().trim() !== ''  ? item.name.toLowerCase().includes(this.nombreTexto().toLowerCase()) : true; // Filtro nombre
-          const matchesGender = this.categoriaSelec() ? item.gender.toLowerCase() === (this.categoriaSelec().toLowerCase()) : true; // Filtro categoria
-          const itemDate = new Date(item.company).setHours(0, 0, 0, 0);
+          const matchesName = this.nombreTexto() && this.nombreTexto().trim() !== ''  ? item.nombre.toLowerCase().includes(this.nombreTexto().toLowerCase()) : true; // Filtro nombre
+          const matchesGender = this.categoriaSelec() ? item.categoria.toLowerCase() === (this.categoriaSelec().toLowerCase()) : true; // Filtro categoria
+          const itemDate = new Date(item.fecha).setHours(0, 0, 0, 0);
           const matchesStartDate = startDate ? itemDate >= startDate : true; // Filtro fecha Inicial
           const matchesEndDate = endDate ? itemDate <= endDate : true; // Filtro fecha Final
 
