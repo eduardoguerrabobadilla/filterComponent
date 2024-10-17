@@ -30,8 +30,8 @@ describe('HomePage', () => {
 
     // Assert: verificar que rows contenga los datos simulados
     expect(rowsData.length).toBe(12);
-    expect(rowsData[0].name).toBe('Austin');
-    expect(rowsData[1].name).toBe('Dany');
+    expect(rowsData[0].nombre).toBe('Coca cola');
+    expect(rowsData[1].nombre).toBe('Pepsi cola');
   });
 
 
