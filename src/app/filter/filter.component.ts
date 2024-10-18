@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { IonInput } from "@ionic/angular/standalone";
 import { MenuDespegableComponent } from './componentes/menu-despegable/menu-despegable.component';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular';
 import { FilterService } from './servicios/filter.service';
 import { CalendarioComponent } from './componentes/calendario/calendario.component';
 import { TooltipsComponent } from "./componentes/tooltips/tooltips.component";
+import { IonButton, IonInput, IonIcon, ModalController} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-filter',
@@ -16,8 +16,14 @@ import { TooltipsComponent } from "./componentes/tooltips/tooltips.component";
     CommonModule,
     MenuDespegableComponent,
     IonicModule,
-    TooltipsComponent
-]
+    TooltipsComponent,
+    IonButton,
+    IonInput,
+    IonIcon,
+    CalendarioComponent,
+
+],
+providers : [ModalController],
 })
 export class FilterComponent  implements OnInit {
 

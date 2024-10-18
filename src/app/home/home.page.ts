@@ -1,50 +1,31 @@
 
 import { Component, inject, OnInit, ViewChild } from '@angular/core';
-import { IonRangeCalendarComponent, IonRangeCalendarModule } from '@googlproxer/ion-range-calendar';
-import { ModalController } from '@ionic/angular';
-import {
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-  IonGrid,
-  IonRow,
-  IonCol,
-  IonCard,
-  IonButton,
-  IonInput, IonIcon, IonBadge, IonItem, IonLabel } from '@ionic/angular/standalone';
+import {  IonRangeCalendarModule } from '@googlproxer/ion-range-calendar';
+import { IonicModule, ModalController } from '@ionic/angular';
 import { ColumnMode, DatatableComponent, NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { CalendarioComponent } from '../filter/componentes/calendario/calendario.component';
 import { FilterService } from './../filter/servicios/filter.service';
-import { CommonModule, DatePipe } from '@angular/common';
-import { MenuDespegableComponent } from './../filter/componentes/menu-despegable/menu-despegable.component';
+import {  CommonModule, DatePipe } from '@angular/common';
 import { addIcons } from 'ionicons';
 import { calendarOutline } from 'ionicons/icons';
 import { FilterComponent } from "../filter/filter.component";
+import { IonButton, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonBadge, IonIcon,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-    IonGrid,
-    IonRow,
-    IonCol,
-    IonCard,
-    IonButton,
-    IonInput,
-    IonItem,
-    IonLabel,
+  imports: [
     NgxDatatableModule,
     IonRangeCalendarModule,
     DatePipe,
-    MenuDespegableComponent,
-    CommonModule, FilterComponent],
+    IonicModule,
+    CommonModule,
+    IonHeader,
+    IonToolbar,
+    IonButton,
+    IonTitle,
+    FilterComponent],
   providers: [DatePipe]
 })
 export class HomePage implements OnInit {

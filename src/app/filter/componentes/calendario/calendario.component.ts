@@ -30,19 +30,17 @@ import { RangoFechas } from '../../interfaces/interface';
   styleUrls: ['calendario.component.scss'],
   standalone: true,
   imports: [
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-    IonCard,
-    IonInput,
     NgxDatatableModule,
     IonRangeCalendarModule,
     CommonModule,
     IonicModule,
-    FormsModule
-
+    FormsModule,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonButton
   ],
+  providers:[ModalController,IonRangeCalendarModule]
 })
 export class CalendarioComponent implements OnInit {
 

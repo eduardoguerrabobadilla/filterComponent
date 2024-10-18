@@ -35,7 +35,6 @@ export class FilterService {
    }
 
 filterData() {
-console.log(this.nombreTexto())
     this.data.update(value =>  {
 
         const startDate = new Date(this.rangoFechas().fechaInicio).setHours(0, 0, 0, 0);
@@ -80,6 +79,7 @@ inicializarData(){
   this.data.set(this.Initdata);
   this.fechaFormateada.set('');
   this.categoriaSelec.set('');
+  this.rangoFechas.set({fechaInicio:'',fechaFin:''})
 
 }
 

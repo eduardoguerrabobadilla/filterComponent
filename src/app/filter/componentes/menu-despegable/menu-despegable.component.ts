@@ -7,6 +7,7 @@ import { menuOutline } from 'ionicons/icons';
 
 import { FilterService } from '../../servicios/filter.service';
 import { addIcons } from 'ionicons';
+import { IonButton, IonCardContent, IonItem, IonLabel, IonList, IonPopover, IonContent } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'menu-despegable',
@@ -16,6 +17,15 @@ import { addIcons } from 'ionicons';
   imports: [
     CommonModule,
     IonicModule,
+    IonButton,
+    IonPopover,
+    IonCardContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonContent
+
+
   ],
 })
 export class MenuDespegableComponent implements OnInit {
